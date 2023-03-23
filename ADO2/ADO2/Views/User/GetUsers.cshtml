@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ADO2.Models.UserModel>
+@{
+    ViewBag.Title = "Users";
+}
+<h2>Users Data</h2>
+<style>
+    #a{
+        text-align:center;
+    } 
+    #b {
+        margin: 20px;                                    
+        padding: 20px;   
+    }
+    #c{ 
+        padding:20px;  
+                                                                                                       
+    }
+    h2{
+        color:brown;
+
+    }
+</style>
+<table border="1">
+    <tr >
+        <th >Username</th>
+        <th >Password</th>
+        <th id="a">Email</th>
+        <th >Phone Number</th>
+    </tr>
+    @foreach(var x in Model)
+            {
+                <tr id="c">
+                    <td>
+                        @Html.DisplayFor(e=>x.Username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(e=>x.Password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(e=>x.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(e=>x.Mobile) 
+                    </td>
+                </tr>
+            }
+</table>

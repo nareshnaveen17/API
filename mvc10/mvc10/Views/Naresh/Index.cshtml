@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <style type="text/css">
+        .even{
+            color:aqua;
+            font-size:40px;
+        }
+        .odd{
+            color:red;
+            font-size:smaller;
+        }
+    </style>
+</head>
+<body>
+    @for (int i = 1; i <= 100; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    <span class="even"> @i</span>
+                }
+                else
+                {
+                     <span class="odd">@i</span>  
+                }
+            }
+</body>
+
+

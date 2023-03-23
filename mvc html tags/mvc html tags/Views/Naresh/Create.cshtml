@@ -1,0 +1,55 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+@using(Html.BeginForm())
+            {
+<table border="0">
+    <tr>
+        <td>
+            @Html.Label("First Name")
+        </td>
+        <td>
+            @Html.TextBox("fname")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Last Name")
+        </td>
+        <td>
+            @Html.TextBox("lname")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Email")
+        </td>
+        <td>
+            @Html.TextBox("me")
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.Label("Phone number")
+        </td>
+        <td>
+            @Html.TextBox("fname")
+        </td> 
+    </tr>
+    <tr>
+        <td>  @Html.Label("password") </td>
+        <td> @Html.Password("pwd") </td>
+    </tr>
+    <tr>
+        <td><input type="submit" value=" save"/></td>
+    </tr>
+    <tr>
+
+        <td> @Html.RadioButton("lang", "h")
+        @Html.Label("Hindi") </td> 
+    </tr>
+</table>
+            }
+

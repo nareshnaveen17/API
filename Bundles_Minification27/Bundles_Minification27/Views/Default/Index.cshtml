@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+@Styles.Render("~/Content/css")
+<h2 id="h">Index</h2>
+
+<p>
+    Ameerpet
+</p>
+<i id="i">hjk
+</i>
+<button>Click</button>
+@Scripts.Render("~/bundles/javascript")
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script>
+    $("button").click(function () {
+        $("#h").hide();
+        var a="hiiii"
+        document.getElementById("i").innerHTML = a;
+        
+    })
+</script>

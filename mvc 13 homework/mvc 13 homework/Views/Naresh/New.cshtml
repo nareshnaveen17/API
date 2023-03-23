@@ -1,0 +1,51 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body style="background-color: cyan">
+    <h1> </h1>
+    @using (Html.BeginForm() )
+    {
+        <table style="color:red">
+            <tr> <td>  @Html.Label("User Name") </td> <td> @Html.TextBox("un") </td> </tr>
+            <tr> <td>  @Html.Label("Password") </td> <td> @Html.Password("p") </td> </tr>
+            <tr> <td>  @Html.Label("Confirm Password") </td> <td> @Html.Password("u") </td> </tr>
+            <tr>
+                <td>  @Html.Label("City") </td>
+
+                <td>
+                    @Html.DropDownList("city", new List<SelectListItem>
+               {
+                   new SelectListItem(){Text="Hyd", Value="a", Selected=true },
+                   new SelectListItem(){Text="Bnglr", Value="b" },
+                   new SelectListItem(){Text="Chennai", Value="c" },
+                   new SelectListItem(){Text="delhi", Value="d"}
+               })
+                </td>
+            </tr>
+            <tr> <td> @Html.Label("Travelling")</td>
+            <td>@Html.ListBox("ls", new List<SelectListItem>
+           {    
+               new SelectListItem(){Text="Goa", Value="a"},
+               new SelectListItem(){Text="india", Value="b"},
+               new SelectListItem(){Text="beijing",Value="c"},
+           }) </td>
+            </tr>
+            <tr> <td>  @Html.Label("Gender") </td> <td> @Html.RadioButton("gen", " ")@Html.Label("Male")@Html.RadioButton("gen", " ")@Html.Label("Female")</td> </tr>
+            <tr> <td>@Html.Label("Hobbies")</td><td>@Html.CheckBox("gen")@Html.Label("Chat") @Html.CheckBox("gen")@Html.Label("Movies") @Html.CheckBox("gen")@Html.Label("Sports") @Html.CheckBox("gen")@Html.Label("chess") </td></tr>
+            <tr>
+                <td> <input type="submit" value="SAVE" /> </td>
+            </tr>
+        </table>
+    }
+
+   
+</body>
+</html>

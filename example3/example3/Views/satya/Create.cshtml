@@ -1,0 +1,24 @@
+﻿@model example3.Models.Movie
+@{
+    ViewBag.Title = "Create";
+}
+
+<table>
+    @using (Html.BeginForm())
+    {
+        <tr>
+            <td>@Html.LabelFor(x => x.ID)</td>
+            <td>@Html.EditorFor(x => x.ID)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.MovieName)</td>
+            <td>@Html.EditorFor(x => x.MovieName)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(x => x.Rating)</td>
+            <td>@Html.EditorFor(x => x.Rating)</td>
+        </tr>
+      <tr><td>  <input type="submit" value="Create" /> </td></tr>
+    }
+</table>
+

@@ -1,0 +1,15 @@
+﻿body {
+    background:pink;
+}
+h1{
+    text-align:center;
+    background:yellow;
+    color:red;
+}
+p{
+    text-align:center;
+    background:gray;
+    color:cyan;
+    font-family:'Berlin Sans FB';
+    font-size:30px;
+}

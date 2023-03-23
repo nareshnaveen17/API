@@ -1,0 +1,42 @@
+﻿@model ADO1.Models.Login
+
+@{
+    ViewBag.Title = "LoginCheck";
+}
+
+<h2>LoginCheck</h2>
+@using (Html.BeginForm())
+            {
+<table>
+    <tr>
+        <td>
+            @Html.LabelFor(x => x.Username)
+        </td>
+        <td>
+            @Html.EditorFor(x => x.Username)
+        </td>
+        <td>
+           @Html.ValidationMessageFor(x=>x.Username)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            @Html.LabelFor(x => x.Password)
+        </td>
+        <td>
+            @Html.EditorFor(x => x.Password)
+        </td>
+        <td>
+            @Html.ValidationMessageFor(x => x.Password)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Check" />
+        </td>
+    </tr>
+</table>
+            } 
+<span>
+    @ViewBag.m
+</span>

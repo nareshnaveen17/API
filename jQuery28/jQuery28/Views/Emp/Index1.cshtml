@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "Index1";
+}
+<html>
+<body>
+    <form>
+        Emp ID : <input type="text" id="tb1" /><br />
+        Emp Name : <input type="text" id="tb2" /><br />
+        Emp Salary : <input type="text" id="tb3" /><br />
+        <input type="submit" id="b1" value="insert" /><br />
+        <div id="div1">
+
+        </div>
+    </form>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $("#b1").click(f1);
+        function f1(event) {
+            event.preventDefault();
+            var insert = { "EmpID": $("#tb1").val(), "EmpName": $("#tb2").val(), "Salary": $("#tb3").val() };
+            $.ajax({
+                url: "/Emp/Insert",
+                type: "POST",
+                data: insert,
+                success: f2,
+                error:f3
+            });
+        }
+        function f2(response) {
+            $("#div1").html(response);
+        }
+        function f3(xhr) {
+            aler(xhr.responseText);
+        }
+    </script>
+</body>
+</html>

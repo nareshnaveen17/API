@@ -1,0 +1,15 @@
+﻿@model List<mvc13.Models.Job>
+@{
+    ViewBag.Title = "ShowJobs";
+}
+<h1 style="color:blue">
+    <ul>
+        @foreach (var item in Model)
+        {
+            <li>  @item.id </li>
+            <li>  @item.name </li>
+            <br>
+        }
+    </ul>
+</h1>
+

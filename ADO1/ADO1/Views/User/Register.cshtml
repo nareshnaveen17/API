@@ -1,0 +1,46 @@
+﻿@model ADO1.Models.Registration
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm())
+            {
+<table>
+    <tr>
+        <td>
+            @Html.LabelFor(x => x.Username)
+        </td>
+        <td>
+            @Html.EditorFor(x => x.Username)
+        </td>
+        <td>
+            @Html.ValidationMessageFor(x => x.Username)
+        </td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x.Password)</td>
+        <td>@Html.PasswordFor(x => x.Password)</td>
+        <td>@Html.ValidationMessageFor(x => x.Password)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x.CPWD)</td>
+        <td>@Html.PasswordFor(x => x.CPWD)</td>
+        <td>@Html.ValidationMessageFor(x => x.CPWD)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x.Email)</td>
+        <td>@Html.EditorFor(x => x.Email)</td>
+        <td>@Html.ValidationMessageFor(x => x.Email)</td>
+    </tr>
+    <tr>
+        <td>@Html.LabelFor(x => x.Mobile)</td>
+        <td>@Html.EditorFor(x => x.Mobile)</td>
+        <td>@Html.ValidationMessageFor(x => x.Mobile)</td>
+    </tr>
+    <tr>
+        <td><input type="submit" value="Register" /> </td>
+    </tr>
+</table>
+            } 

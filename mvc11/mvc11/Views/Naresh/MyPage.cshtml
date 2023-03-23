@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    @{
+        int a = 10, b = 20;
+        int c = a + b;
+    }
+    @c
+    @{ 
+        List<string> lis = new List<string>();
+        lis.Add("hi");
+        lis.Add("mg");
+        lis.Add("hrllo");
+    }
+    <ul>
+        @foreach(var i in lis)
+            {
+                <li> @i</li>
+            }
+    </ul>
+    <div>
+        @for(int i = 0; i < 10; i++)
+            {
+                @:Sathya<br>
+            }
+    </div>
+    @{ 
+        int s = 100;
+    }
+    @(++s)
+</body>
+</html>

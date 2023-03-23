@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+<form>
+    <table>
+        <tr>
+            <td>Emp ID</td>
+            <td><input type="text" id="t1"/></td>
+        </tr>
+        <tr>
+            <td>Emp Name</td>
+            <td><input type="text"  id="t2"/></td>
+        </tr>
+        <tr>
+            <td>Emp Salary</td>
+            <td><input type="text" id="t3"/></td>
+        </tr>
+        <tr><td><input type="submit" id="b1" value="Insert"/></td></tr>
+    </table>
+    <div id="div1"></div>
+</form>
+<script src="~/Scripts/jquery-3.4.1.js">
+
+</script>
+<script>
+    $("#b1").click(insert);
+    function insert(event) {
+        event.preventDefault();
+        var mdata = { "Empid": $("#t1").val(), "EmpName": $("#t2").val(), "Salary": $("#t3").val() };
+        $.ajax({
+            url: "/api/API",
+            type: "POST",
+            data: mdata,
+            success: f2,
+            error: f3
+        });
+    }
+    function f2(response) {
+        $("#div1").html(response);
+    }
+    function f3(xhr) {
+        alert(xhr.responseText);
+    }
+</script>

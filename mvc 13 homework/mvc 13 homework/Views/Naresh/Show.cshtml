@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+<table border="5">
+    <tr>
+        <th>Student id</th>
+        <th>Student Name</th>
+        <th> Student fee</th>
+    </tr>
+    <tr>
+        <td>@Model.stu.sid</td>
+        <td>@Model.stu.sname</td>
+        <td>@Model.stu.fee</td>
+    </tr>
+</table>
+<br />
+<br />
+<br />
+<table border="5">
+    <tr>
+        <th>Teacher id</th>
+        <th>Teacher Name</th>
+        <th> Teacher salary</th>
+    </tr>
+    <tr>
+        <td>@Model.tea.tid</td>
+        <td>@Model.tea.tname</td>
+        <td>@Model.tea.sal</td>
+    </tr>
+</table>

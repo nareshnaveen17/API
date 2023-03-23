@@ -1,0 +1,11 @@
+﻿@{
+    List<string> Images = new List<string>();
+    {
+        <img src="~/Content/Images/messi.jpg"  width="500" height="300"/>
+    };
+
+}
+@foreach (var item in Images)
+{
+    <img src="@Url.Content(item)"/>
+}

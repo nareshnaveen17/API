@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "getdata";
+}
+
+<h1>getdata</h1>
+<table border="1">
+    <tr>
+        <th>eno</th>
+        <th>ename</th>
+        <th>sal</th>
+    </tr>
+    @foreach(var b in ViewBag.s)
+            {
+                <tr>
+                    <td>@b.eno</td>
+                    <td>@b.ename</td>
+                    <td>@b.sal</td>
+                </tr>
+            }
+</table>
+

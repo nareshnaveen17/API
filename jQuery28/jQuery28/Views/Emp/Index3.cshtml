@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index3";
+}
+
+<h2>Index3</h2>
+
+<html>
+<body>
+    <form>
+        ExistingEmp ID:<input type="text" id="txt1" /><br />
+            <input type="submit" id="b1" value="Delete" />
+            <div id="div1"></div>
+    </form>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script>
+        $("#b1").click(f1);
+        function f1(event) {
+            event.preventDefault();
+            $.ajax({
+                url: "/Emp/Delete?del="+$("#txt1").val(),
+                type: "POST",
+                success: f2,
+                error: f3
+            });
+        }
+        function f2(response) {
+            $("#div1").html(response);
+        }
+        function f3(xhr) {
+            aler(xhr.responseText);
+        }
+    </script>
+</body>
+</html>

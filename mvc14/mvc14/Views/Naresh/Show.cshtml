@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "Show";
+}
+
+<table border="4">
+    <tr>
+        <th>
+            Employee ID
+        </th>
+        <th>
+            Employee Name
+        </th>
+        <th>
+            Employee Salary
+        </th>
+
+    </tr>
+    <tr>
+        <td>
+            @Model.em.eid
+        </td>
+        <td>
+            @Model.em.ename
+        </td>
+        <td>
+            @Model.em.sal
+        </td>
+    </tr>
+</table>
+<br />
+<br />
+<table border="5">
+<tr>
+    <th>
+        Product ID
+    </th>
+    <th>
+        Prod Name
+    </th>
+    <th>
+        Prod cost
+    </th>
+</tr>
+    <tr>
+        <td>
+            @Model.prod.pid
+        </td>
+        <td>
+            @Model.prod.pname
+        </td>
+        <td>
+            @Model.prod.price
+        </td>
+    </tr>
+    </table>
+
